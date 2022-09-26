@@ -1,12 +1,17 @@
 
 public class Main {
 
-    static void MyMethod(String name, int age) {
-        System.out.println(name + " is " + age + " years old");
+    public static void main(String[] args) {
+        int result = sum(10);
+        System.out.println(result);
     }
 
-    public static void main(String[] args) {
-        MyMethod("alex", 6);
+    static int sum(int k) { //use void only when no need to return , otherwise add type
+        if (k > 0) {
+            return k + sum(k - 1);
+        } else {
+            return 0;
+        }
     }
 
 }
