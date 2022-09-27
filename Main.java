@@ -1,17 +1,20 @@
-
 public class Main {
-
-    public static void main(String[] args) {
-        int result = sum(10);
-        System.out.println(result);
+    // static method
+    static void sta() {
+        System.out.println("i am good");
     }
 
-    static int sum(int k) { //use void only when no need to return , otherwise add type
-        if (k > 0) {
-            return k + sum(k - 1);
-        } else {
-            return 0;
-        }
+    // public method
+    public void newstat() {
+        System.out.println("she is good too");
+    }
+
+    public static void main(String[] args) {
+        sta(); // can print statement without using the object
+
+        Main myobj = new Main(); // Create an object and main as class
+        myobj.newstat(); // Call the public method on the object
+        // if call directly will cause an error
     }
 
 }
